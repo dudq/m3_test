@@ -1,0 +1,20 @@
+<h3 class="text-center">Edit Customer</h3>
+<form (ngSubmit)="onsubmit();" [formGroup]="editForm" class="col-md-6 offset-md-3">
+  <div class="form-group">
+    <label class="row">
+      First Name:
+      <input class="form-control" formControlName="firstName" placeholder="First Name" type="text">
+    </label>
+    <div *ngIf="editForm.get('firstName').invalid && editForm.get('firstName').touched" class="alert alert-danger row">
+      Invalid First Name
+    </div>
+    <label class="row">
+      Last Name:
+      <input class="form-control" formControlName="lastName" placeholder="Last Name" type="text">
+    </label>
+    <div *ngIf="editForm.get('lastName').invalid && editForm.get('lastName').touched" class="alert alert-danger row">
+      Invalid Last Name
+    </div>
+    <button class="btn btn-info">Submit</button>
+  </div>
+</form>

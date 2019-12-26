@@ -1,0 +1,22 @@
+<h3 class="text-center">Create Customer</h3>
+<form (ngSubmit)="onsubmit();" [formGroup]="createForm" class="col-md-6 offset-md-3">
+  <div class="form-group">
+    <label class="row">
+      First Name:
+      <input class="form-control" formControlName="firstName" placeholder="First Name" type="text">
+    </label>
+    <div *ngIf="createForm.get('firstName').invalid && createForm.get('firstName').touched"
+         class="alert alert-danger row">
+      Invalid First Name
+    </div>
+    <label class="row">
+      Last Name:
+      <input class="form-control" formControlName="lastName" placeholder="Last Name" type="text">
+    </label>
+    <div *ngIf="createForm.get('lastName').invalid && createForm.get('lastName').touched"
+         class="alert alert-danger row">
+      Invalid Last Name
+    </div>
+    <button class="btn btn-info">Submit</button>
+  </div>
+</form>

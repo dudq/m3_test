@@ -1,0 +1,24 @@
+<a class="link" routerLink="/create">Create new customer</a>
+<h3 class="text-center">List Customer</h3>
+<table class="table table-bordered table-hover">
+  <thead style="background-color: cornflowerblue">
+  <td>Id</td>
+  <td>FirstName</td>
+  <td>LastName</td>
+  <td>Edit</td>
+  <td>Delete</td>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of listCustomer">
+    <td>{{customer.id}}</td>
+    <td>{{customer.firstName}}</td>
+    <td>{{customer.lastName}}</td>
+    <td>
+      <button [routerLink]="['/edit/',customer.id]">Edit</button>
+    </td>
+    <td>
+      <button [routerLink]="['/delete/',customer.id]">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

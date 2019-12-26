@@ -1,0 +1,14 @@
+<h3 class="text-center">Delete Customer</h3>
+<form (ngSubmit)="onsubmit();" [formGroup]="deleteForm" class="col-md-6 offset-md-3">
+  <div class="form-group">
+    <label class="row">
+      First Name:
+      <input class="form-control" formControlName="firstName" placeholder="First Name" readonly type="text">
+    </label>
+    <label class="row">
+      Last Name:
+      <input class="form-control" formControlName="lastName" placeholder="Last Name" readonly type="text">
+    </label>
+    <button class="btn btn-info">Submit</button>
+  </div>
+</form>
