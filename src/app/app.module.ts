@@ -12,6 +12,9 @@ import {CustomerComponent} from './customer/customer.component';
 import {CreateCustomerComponent} from './create-customer/create-customer.component';
 import {EditCustomerComponent} from './edit-customer/edit-customer.component';
 import {DeleteCustomerComponent} from './delete-customer/delete-customer.component';
+import {BooksComponent} from './books/books.component';
+import {CreateBookComponent} from './create-book/create-book.component';
+import {BookReadComponent} from './book-read/book-read.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import {DeleteCustomerComponent} from './delete-customer/delete-customer.compone
     CustomerComponent,
     CreateCustomerComponent,
     EditCustomerComponent,
-    DeleteCustomerComponent
+    DeleteCustomerComponent,
+    BooksComponent,
+    CreateBookComponent,
+    BookReadComponent
   ],
   imports: [
     BrowserModule,
